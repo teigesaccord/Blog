@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+        <h3>Welcome to Teige's blog! </h3>
+        <p>More to come later</p>
+</div>
+
+
+<p>
+        {% if request.user.is_authenticated %}
+              Logged in {{request.user.username}}
+        {% else %}
+                Not logged in
+        {% endif %}
+
+</p>
+{% endblock body %}
